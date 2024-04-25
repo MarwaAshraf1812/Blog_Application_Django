@@ -1,0 +1,55 @@
+/* General blog styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+h2 {
+    color: #666;
+    margin-bottom: 5px;
+}
+
+h2 a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+h2 a:hover {
+    text-decoration: underline;
+}
+
+p.date {
+    color: #888;
+    font-size: 0.9em;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Style for post body text */
+p {
+    line-height: 1.6;
+    margin-top: 0;
+}
+
+/* Utility classes for visual spacing and text formatting */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        margin: auto;
+    }
+
+    h1, h2 {
+        text-align: left;
+    }
+}
