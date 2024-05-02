@@ -34,6 +34,32 @@ p {
     line-height: 1.6;
     margin-top: 0;
 }
+/* Sidebar styling */
+#sidebar {
+    width: 26%; /* Fixed width for the sidebar */
+    position: fixed; /* Fixed position relative to the viewport */
+    right: 0; /* Align to the right of the page */
+    top: 0; /* Start from the top of the viewport */
+    height: 100%; /* Full height */
+    background-color: #ffffff; /* Light background for the sidebar */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow on the left edge */
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+/* Heading in the sidebar */
+#sidebar h2 {
+    color: #2980b9;
+    font-size: 24px;
+    margin-top: 0;
+}
+
+/* Paragraph in the sidebar */
+#sidebar p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+}
 
 /* Utility classes for visual spacing and text formatting */
 .container {
@@ -52,4 +78,67 @@ p {
     h1, h2 {
         text-align: left;
     }
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Style for the title in both conditions */
+.share-title {
+    color: #2C3E50;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+/* Paragraph styling for success message */
+.share-p {
+    font-size: 16px;
+    color: #27ae60;
+    text-align: center;
+}
+
+/* Styling for input fields and textarea inside the form */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(100% - 40px); /* Full width minus padding */
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+/* Styling for the submit button */
+.share-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Hover effect for the button */
+.share-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Error message styling, if you have form errors displayed */
+.errorlist {
+    color: #e74c3c;
+    font-size: 14px;
+    list-style-type: none; /* Removes bullet points from error lists */
+    padding: 0;
 }

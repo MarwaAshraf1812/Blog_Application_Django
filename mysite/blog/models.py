@@ -8,12 +8,28 @@ class PublishedManager(models.Manager):
             .filter(status=Post.Status.PUBLISHED)
 
 class Post(models.Model):
+    """
+    - The method is used to tell Django how to find the web 
+      page that shows details about a specific blog post.
+    - The get_absolute_url() method will return the canonical URL of the object.
+    - Using the get_absolute_url method, Django can automatically generate a URL 
+      like /2023/05/01/my-first-blog/ that takes a visitor directly to this post.
+    """
+    def get_absolute_url(self):
+        from django.urls import reverse
+        return reverse('blog:post_detail',
+                       args=[self.publish.year,
+                             self.publish.month,
+                             self.publish.day,
+                             self.slug])
+    
     class Status(models.TextChoices):
         DRAFT = 'DF', 'Draft'
         PUBLISHED = 'PB', 'Published'
 
     title = models.CharField(max_length=250)
-    slug = models.SlugField(max_length=250)
+    slug = models.SlugField(max_length=250,
+                            unique_for_date='publish')
     author = models.ForeignKey(User,
                                on_delete=models.CASCADE,
                                related_name='blog_posts')
