@@ -8,7 +8,7 @@
         Published {{ post.publish  }} by {{post.author}}
     </p>
     {{ post.body|linebreaks }}
-    <p>
+    <p class="share-links">
         <a href="{% url "blog:post_share" post.id %}">Share this post</a>
     </p>
     {% with comments.count as total_comments %}
